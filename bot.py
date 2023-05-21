@@ -43,6 +43,7 @@ def encriptar():
     contenido_encriptado = cipher_suite.encrypt(contenido)
 
     with open("archivo_encriptado.txt", "wb") as archivo_encriptado:
+        archivo_encriptado.write(clave)
         archivo_encriptado.write(contenido_encriptado)
 
     borrar_archivo_base()
